@@ -1,15 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import './index.css'
-import Root, {action as rootAction, loader as rootLoader } from './routes/root'
+import "./index.css";
+import Root, {
+  action as rootAction,
+  loader as rootLoader,
+} from "./routes/root";
 import EditContact, { action as editAction } from "./routes/edit";
-import ErrorPage from './error-page'
-import Contact, {
-  loader as contactLoader,
-} from "./routes/contact";
-
+import ErrorPage from "./error-page";
+import Contact, { loader as contactLoader } from "./routes/contact";
+import { action as destroyAction } from "./routes/destroy";
 
 const router = createBrowserRouter([
   {
@@ -28,15 +29,18 @@ const router = createBrowserRouter([
         path: "contacts/:contactId/edit",
         element: <EditContact />,
         loader: contactLoader,
-        action: editAction
+        action: editAction,
+      },
+      {
+        path: "contacts/:contactId/destroy",
+        action: destroyAction,
       },
     ],
   },
 ]);
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
