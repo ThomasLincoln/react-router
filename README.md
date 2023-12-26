@@ -7,9 +7,9 @@
 ![Static Badge](https://img.shields.io/badge/for-study-brightgreen?color=purple)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-
-> This is a project that i made to study React Router, so, is just a example.
+> This is a project that I made to study React Router, so, is just an example.
 
 
 ## 💻 Prerequisites
@@ -22,5 +22,5 @@ To run this, just follow these steps:
 
 ```
 npm i
-npm start
+npm run dev
 ```
